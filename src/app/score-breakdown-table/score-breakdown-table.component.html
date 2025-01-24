@@ -8,35 +8,17 @@
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <td class="first-column-cell">San Paulo, Br</td>
-      <td>14</td>
-      <td>75</td>
-      <td>1050</td>
-    </tr>
-    <tr>
-      <td class="first-column-cell">San Paulo, Br</td>
-      <td>14</td>
-      <td>75</td>
-      <td>1050</td>
-    </tr>
-    <tr>
-      <td class="first-column-cell">San Paulo, Br</td>
-      <td>14</td>
-      <td>75</td>
-      <td>1050</td>
-    </tr>
-    <tr>
-      <td class="first-column-cell">San Paulo, Br</td>
-      <td>14</td>
-      <td>75</td>
-      <td>1050</td>
+    <tr *ngFor="let score of scoreBreakdowns">
+      <td class="first-column-cell">{{ score.destination }}</td>
+      <td>{{ score.pointsPerDay }}</td>
+      <td>{{ score.duration }}</td>
+      <td>{{ score.tripTotal }}</td>
     </tr>
   </tbody>
   <tfoot>
     <tr class="player-total-row">
       <td>Player Score Total</td>
-      <td>4200</td>
+      <td>793</td>
     </tr>
   </tfoot>
 </table>
