@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
+import { LeaderboardTableComponent } from '../leaderboard-table/leaderboard-table.component';
 
 @Component({
   selector: 'app-leaderboard',
-  imports: [],
+  imports: [LeaderboardTableComponent],
   templateUrl: './leaderboard.component.html',
-  styleUrl: './leaderboard.component.css'
+  styleUrl: './leaderboard.component.css',
 })
-export class LeaderboardComponent {
-
-}
+export class LeaderboardComponent {}

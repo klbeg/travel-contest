@@ -1,0 +1,69 @@
+<table>
+  <tr class="table-header">
+    <th class="first-column-cell">Player Name</th>
+    <th>Score</th>
+    <th>View Breakdown</th>
+  </tr>
+  <!-- <tbody> -->
+  <tr *ngFor="let row of allScores">
+    <td class="first-column-cell">{{ row.playerName }}</td>
+    <td>{{ row.playerScore }}</td>
+    <td>
+      <a
+        routerLink="/score-breakdown/{{ row.playerId }}"
+        routerLinkActive="active"
+        ariaCurrentWhenActive="page"
+        >View</a
+      >
+    </td>
+    <!-- <tr >
+      <td class="first-column-cell">Kevin B</td>
+      <td>230</td>
+      <td>
+        <a
+          routerLink="/score-breakdown"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >View</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td class="first-column-cell">Kevin B</td>
+      <td>230</td>
+      <td>
+        <a
+          routerLink="/score-breakdown"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >View</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td class="first-column-cell">Kevin B</td>
+      <td>230</td>
+      <td>
+        <a
+          routerLink="/score-breakdown"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >View</a
+        >
+      </td>
+    </tr>
+    <tr>
+      <td class="first-column-cell">Kevin B</td>
+      <td>230</td>
+      <td>
+        <a
+          routerLink="/score-breakdown"
+          routerLinkActive="active"
+          ariaCurrentWhenActive="page"
+          >View</a
+        >
+      </td> 
+    </tr> -->
+  </tr>
+  <!-- </tbody> -->
+</table>

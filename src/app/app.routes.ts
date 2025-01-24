@@ -4,7 +4,7 @@ import { ScoreBreakdownComponent } from './score-breakdown/score-breakdown.compo
 
 export const routes: Routes = [
   {
-    path: 'score-breakdown',
+    path: 'score-breakdown/:id',
     component: ScoreBreakdownComponent,
   },
   {

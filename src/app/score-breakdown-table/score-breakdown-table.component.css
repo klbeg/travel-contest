@@ -1,0 +1,16 @@
+table {
+  height: 500.5px;
+}
+tr {
+  grid-template-columns: 1.3fr 1fr 1fr 1fr;
+}
+tfoot tr {
+  border: 2px 0 0 0;
+  border-color: black;
+  grid-template-columns: 2fr 1fr;
+}
+tfoot td {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: bold;
+}
