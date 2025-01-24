@@ -9,6 +9,7 @@ import { CommonModule } from '@angular/common';
   imports: [RouterLink, RouterLinkActive, CommonModule],
   templateUrl: './leaderboard-table.component.html',
   styleUrl: './leaderboard-table.component.css',
+  host: { hostID: crypto.randomUUID().toString() },
 })
 export class LeaderboardTableComponent {
   scoresService: ScoresService = inject(ScoresService);

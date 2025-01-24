@@ -6,5 +6,6 @@ import { LeaderboardTableComponent } from '../leaderboard-table/leaderboard-tabl
   imports: [LeaderboardTableComponent],
   templateUrl: './leaderboard.component.html',
   styleUrl: './leaderboard.component.css',
+  host: { hostID: crypto.randomUUID().toString() },
 })
 export class LeaderboardComponent {}

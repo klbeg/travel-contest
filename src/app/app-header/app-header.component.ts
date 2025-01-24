@@ -7,6 +7,7 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   imports: [FormsModule, RouterLink, RouterLinkActive],
   templateUrl: './app-header.component.html',
   styleUrl: './app-header.component.css',
+  host: { hostID: crypto.randomUUID().toString() },
 })
 export class AppHeaderComponent {
   isChecked: boolean = false;

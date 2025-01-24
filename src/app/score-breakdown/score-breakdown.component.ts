@@ -6,5 +6,6 @@ import { ScoreBreakdownTableComponent } from '../score-breakdown-table/score-bre
   imports: [ScoreBreakdownTableComponent],
   templateUrl: './score-breakdown.component.html',
   styleUrl: './score-breakdown.component.css',
+  host: { hostID: crypto.randomUUID().toString() },
 })
 export class ScoreBreakdownComponent {}
