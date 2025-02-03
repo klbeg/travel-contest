@@ -9,22 +9,22 @@ export class ScoresService {
   mockPlayerScores: PlayerScore[] = [
     {
       playerId: 1,
-      playerName: 'Kevin Begin',
+      playerName: 'Kevin',
       playerScore: 1400,
     },
     {
       playerId: 2,
-      playerName: 'Halsey Quinn',
+      playerName: 'Halsey',
       playerScore: 1200,
     },
     {
       playerId: 3,
-      playerName: 'Tanner Daltsworth',
+      playerName: 'Tanner',
       playerScore: 900,
     },
     {
       playerId: 1,
-      playerName: 'Janet Guthrie',
+      playerName: 'Janet',
       playerScore: 750,
     },
   ];

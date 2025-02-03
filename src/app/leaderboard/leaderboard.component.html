@@ -2,7 +2,9 @@
   <section>
     <header>
       <h2 class="page-title">Leaderboard</h2>
-      <button class="add-player-button">Add Shared Calendar</button>
+      <button class="sync-calendar-button" (click)="syncCalendar()">
+        Sync Shared Calendar
+      </button>
     </header>
     <app-leaderboard-table />
   </section>

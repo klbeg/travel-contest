@@ -8,4 +8,8 @@ import { LeaderboardTableComponent } from '../leaderboard-table/leaderboard-tabl
   styleUrl: './leaderboard.component.css',
   host: { hostID: crypto.randomUUID().toString() },
 })
-export class LeaderboardComponent {}
+export class LeaderboardComponent {
+  syncCalendar() {
+    console.log('clicked');
+  }
+}

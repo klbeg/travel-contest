@@ -1,5 +1,6 @@
-.add-player-button {
+.sync-calendar-button {
   font-size: 18px;
   font-weight: bold;
   height: 36px;
+  cursor: pointer;
 }
