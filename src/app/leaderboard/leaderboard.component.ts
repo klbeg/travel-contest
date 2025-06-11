@@ -10,7 +10,7 @@ import { CommonModule } from '@angular/common';
   host: { hostID: crypto.randomUUID().toString() },
 })
 export class LeaderboardComponent implements OnInit {
-  user: gapi.auth2.GoogleUser | null;
+  user: string | null;
 
   constructor(private ref: ChangeDetectorRef) {
     this.user = null;

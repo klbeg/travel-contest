@@ -1,7 +1,9 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { ScoresService } from '../scores.service';
 import { TripScoreBreakdown } from '../player-score';
 import { CommonModule } from '@angular/common';
+import { ActivatedRoute } from '@angular/router';
+import { Observable, switchMap } from 'rxjs';
 
 @Component({
   selector: 'app-score-breakdown-table',
@@ -10,13 +12,22 @@ import { CommonModule } from '@angular/common';
   styleUrl: './score-breakdown-table.component.css',
   host: { hostID: crypto.randomUUID().toString() },
 })
-export class ScoreBreakdownTableComponent {
+export class ScoreBreakdownTableComponent implements OnInit {
+  private readonly route = inject(ActivatedRoute);
   scoresService: ScoresService = inject(ScoresService);
   scoreBreakdowns: TripScoreBreakdown[] = [];
 
-  constructor() {
-    this.scoresService
-      .getPlayerScoreBreakdown()
-      .then((scores: TripScoreBreakdown[]) => (this.scoreBreakdowns = scores));
+  ngOnInit() {
+    const playerId: number | null = Number(
+      this.route.snapshot.paramMap.get('id')
+    );
+    if (playerId) {
+      this.scoresService
+        .getPlayerScoreBreakdown(playerId)
+        .then(
+          (scores: TripScoreBreakdown[]) => (this.scoreBreakdowns = scores)
+        );
+    }
   }
+  constructor() {}
 }
