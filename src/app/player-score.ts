@@ -6,6 +6,7 @@ export interface PlayerScore {
 
 export interface TripScoreBreakdown {
   destination: string;
+  playerId: number;
   pointsPerDay: number;
   duration: number;
   tripTotal: number;
